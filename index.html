@@ -2,6 +2,8 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <style>
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
       body {
         background-color: rgba(0, 0, 255, 0.2);
         font-family: "Source Sans Pro", sans-serif;
@@ -17,14 +19,28 @@
       }
       .grid-item {
         float: left;
-        width: 29%;
+        width: 25%;
         min-width: 220px;
         background-color: white;
         margin: 10px;
-        padding: 10px;
+        padding: 25px;
         border-radius: 2px;
         box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
       }
+
+      .contact-list {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-item, .contact-item a:link, .contact-item a:visited, .contact-item a:active {
+        font-size: 40px;
+        display: inline;
+        text-decoration: none;
+        margin-right: 5px;
+        color: black;
+      }
+
     </style>
 
     <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
@@ -37,11 +53,24 @@
         <img src="img/me.jpg">
         <h1>Richard Li</h1>
         <hr>
-        <p>Hey, I'm Richard.  Check out some stuff I've done or feel free to drop me a line about anything.</p>
-        <ul>
-          <li><a href="https://www.github.com/lichard49">github.com/lichard49</a></li>
-          <li><a href="https://www.linkedin.com/in/lichard49">linkedin.com/in/lichard49</a></li>
-          <li><a href="mailto:lichard49@gmail.com">lichard49@gmail.com</a></li>
+        <p>Hey, I'm Richard.  Check out some of the stuff I've done or feel free to drop me a line about anything.</p>
+        
+        <ul class="contact-list">
+          <li class="contact-item">
+            <a href="https://www.github.com/lichard49">
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="contact-item">
+            <a href="https://www.linkedin.com/in/lichard49">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="contact-item">
+            <a href="mailto:lichard49@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="grid-item">
@@ -65,7 +94,6 @@
       </div>
       </div>
     </div>
-
 
     <script type="text/javascript">
       $(document).ready(function() {
