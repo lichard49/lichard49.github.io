@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <style>
+      body {
+        background-color: blue;
+      }
+      img {
+        width: 100%;
+      }
+      .grid {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .grid-item {
+        float: left;
+        width: 30%;
+        background-color: white;
+        margin: 10px;
+        padding: 5px;
+      }
+    </style>
+
+    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div class="grid-item">
+        <img src="img/me.jpg">
+        <hr>
+        <p>Hi, I'm Richard Li.  Check out some stuff I've done or feel free to drop me a line about anything.</p>
+        <ul>
+          <li><a href="https://www.github.com/lichard49">github.com/lichard49</a></li>
+          <li><a href="https://www.linkedin.com/in/lichard49">linkedin.com/in/lichard49</a></li>
+          <li><a href="mailto:lichard49@gmail.com">lichard49@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="grid-item">
+        <h1>Education</h1>
+        <hr>
+        <p>I'm a senior graduating in May 2016 with a Bachelor of Science in Computer Science from Georgia Tech, concentrating on devices and artificial intelligence.  I'm also pursuing a clarinet performance music minor</p>
+      </div>
+      <div class="grid-item">
+        <h1>Industry</h1>
+        <hr>
+        <p>My latest experience was as a Software Development Engineer internship at Amazon.com building Protection Plan Finder from scratch (and it was launched!).  I previously held internships at Intel and Broadcom.</p></div>
+      <div class="grid-item">
+        <h1>Teaching</h1>
+        <hr>
+        <p>I have an interest in teaching not just the next generation, but also the current one.  I co-found and co-lead Georgia Tech's Technical Interview Preparation organization.  I'm also a former member of HackGT and helped put on two iterations of the hackathon which I believe were major learning opportunities for the Georgia Tech community.</p>
+      </div>
+      <div class="grid-item">
+        <h1>Research</h1>
+        <hr>
+        <p>My research interests are in mobile, wearable and ubiquitous computing.  I have been in the ACME Lab for the majority of my undergraduate career working on Tactile Teacher.  More recently, I joined the Contextual Computing Group working on several cool projects.</p>
+      </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        
+        var $grid = $('.grid').imagesLoaded( function() {
+          // init Masonry after all images have loaded
+          $grid.masonry({
+            $('.grid').masonry({
+              // options
+              itemSelector: '.grid-item',
+              columnWidth: 500
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
