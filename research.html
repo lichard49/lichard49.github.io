@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection">
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+	<body class="blue lighten-4">
+		<div class="container">
+			<nav>
+				<div class="nav-wrapper">
+					<a href="#!" class="brand-logo">Richard Li</a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li class="active"><a href="research.html">Research</a></li>
+						<li><a href="hacks.html">Hacks</a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li class="active"><a href="research.html">Research</a></li>
+						<li><a href="hacks.html">Hacks</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="card horizontal white darken-1">
+						<div class="card-image">
+							<img class="responsive-img" src="http://lichard49.github.io/img/me.jpg">
+						</div>
+						<div class="card-content black-text">
+							<span class="card-title">About</span>
+							<p>I've just started my graduate studies at Georgia Tech pursuing a Master's in Computer Science, with a specialization in Interactive Intelligence. I graduated back in May 2016 with a Bachelor of Science in Computer Science from Georgia Tech, with concentrations in devices and artificial intelligence. I also completed a clarinet performance music minor.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card horizontal white darken-1">
+						<div class="card-image">
+							<img class="responsive-img" src="img/earbit.png">
+						</div>
+						<div class="card-content black-text">
+							<span class="card-title">EarBit: Wearables for Detecting Eating Activities</span>
+							<p>Food journaling is often prescribed by physicians to help combat chronic diseases such diabetes by stimulating self-reflection about one's eating habits.  This project demonstrates a wearable device to help users not forget to journal their meals.</p>
+						</div>
+						<div class="card-action">
+			              <a href="#">Read more >></a>
+			            </div>
+					</div>
+				</div>
+
+				<div class="col s12 m6">
+					<div class="card horizontal white darken-1">
+						<div class="card-image">
+							<img class="responsive-img" src="http://static5.businessinsider.com/image/56ca1b8ddd08958b6d8b47f7-1614-1210/samsung-gear-vr-virtual-reality-2.jpg">
+						</div>
+						<div class="card-content black-text">
+							<span class="card-title">Low Cost Virtual Reality Sensing and Interactions</span>
+							<p>Virtual reality headsets have become increasingly accessible to consumers due to their declining costs.  This series of works makes use of low cost techniques for enhancing the virtual reality experience.</p>
+						</div>
+						<div class="card-action">
+			              <p>Coming soon</p>
+			            </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card horizontal white darken-1">
+						<div class="card-image">
+							<img class="responsive-img" src="https://tse4.mm.bing.net/th?id=OIP.wYE4A08fiZAQLFHgDDjAKwEsDh&pid=Api">
+						</div>
+						<div class="card-content black-text">
+							<span class="card-title">Audio Life Logging</span>
+							<p>Information is at an unprecedented level of convenient thanks to mobile and wearable devices.  However, these small devices are not nearly as convienent for input.  We're exploring cues in everyday speech that can be leveraged for automatic logging.</p>
+						</div>
+						<div class="card-action">
+			              <p>Coming soon</p>
+			            </div>
+					</div>
+				</div>
+
+				<div class="col s12 m6">
+					<div class="card horizontal white darken-1">
+						<div class="card-image">
+							<img class="responsive-img" src="img/tactile_teacher.jpg">
+						</div>
+						<div class="card-content black-text">
+							<span class="card-title">Tactile Teacher: Enhancing Traditional Piano Lessons</span>
+							<p>Piano lessons traditionally consist of students watching and listening to the teacher demonstrate a passage of music, and then attempting to mimic it.  Tactile Teacher allows teachers to also share the tactile sensation of tapping the piano keys to help students better prepare for their own attempt.</p>
+						</div>
+						<div class="card-action">
+			              <a href="#">Read more >></a>
+			            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript">
+			$( document ).ready(function(){
+				console.log($(".button-collapse"));
+				$(".button-collapse").sideNav();
+			});
+		</script>
+	</body>
+</html>
