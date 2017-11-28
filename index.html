@@ -1,123 +1,119 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <style>
-@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection">
+		<link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen,projection">
 
-      body {
-        background-color: rgba(0, 0, 255, 0.2);
-        font-family: "Source Sans Pro", sans-serif;
-        color: #333333;
-      }
-      img {
-        width: 100%;
-      }
-      .grid {
-        max-width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .grid-item {
-        float: left;
-        width: 25%;
-        min-width: 220px;
-        background-color: white;
-        margin: 10px;
-        padding: 25px;
-        border-radius: 2px;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.2),0 1px 5px 0 rgba(0,0,0,0.12);
-      }
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-      .contact-list {
-        margin-left: auto;
-        margin-right: auto;
-      }
+		<style>
+			.card-panel {
+				padding-bottom: 0.6em;
+			}
+			.responsive-img-card {
+				padding-top: 0px;
+				padding-left: 0px;
+				padding-bottom: 0em;
+			}
 
-      .contact-item, .contact-item a:link, .contact-item a:visited, .contact-item a:active {
-        font-size: 40px;
-        display: inline;
-        text-decoration: none;
-        margin-right: 5px;
-        color: black;
-      }
+			.responsive-img-col {
+				margin-bottom: -6px;
+			}
 
-    </style>
+			.fa {
+				margin-right: 0.5em;
+				color: black;
+			}
+		</style>
+	</head>
 
-    <script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+	<body class="grey lighten-4">
+		<div class="container">
 
-  <body>
+			<div class="row">
+				<div class="col s12 m12">
+					<nav>
+						<div class="nav-wrapper blue lighten-2">
+							<a href="index.html" class="brand-logo left">&nbsp;&nbsp;Richard Li</a>
+							<ul class="right">
+								<li><a href="research.html">Research Projects</a></li>
+								<!-- <li><a href="hacks.html">Hacks</a></li> -->
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
 
-    <div class="grid">
-      <div class="grid-item">
-        <img src="img/me.jpg">
-        <h1>Richard Li</h1>
-        <hr>
-        <p>Hey, I'm Richard.  Check out some of the stuff I've done or feel free to drop me a line about anything.</p>
-        
-        <ul class="contact-list">
-          <li class="contact-item">
-            <a href="https://www.github.com/lichard49">
-              <i class="fa fa-github"></i>
-            </a>
-          </li>
-          <li class="contact-item">
-            <a href="https://www.linkedin.com/in/lichard49">
-              <i class="fa fa-linkedin"></i>
-            </a>
-          </li>
-          <li class="contact-item">
-            <a href="mailto:lichard49@gmail.com">
-              <i class="fa fa-envelope"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="grid-item">
-        <h1>Education</h1>
-        <hr>
-        <p>I've just started my graduate studies at Georgia Tech pursuing a Master's in Computer Science, with a specialization in <a href="http://www.cc.gatech.edu/academics/degree-programs/masters/computer-science/specializations">Interactive Intelligence</a>.  I graduated back in May 2016 with a Bachelor of Science in Computer Science from Georgia Tech, with concentrations in <a href="http://www.catalog.gatech.edu/colleges/coc/ugrad/comsci/threads/degreq/devices-intel.php">devices and artificial intelligence</a>.  I also completed a clarinet performance music minor.</p>
-      </div>
-      <div class="grid-item">
-        <h1>Industry</h1>
-        <hr>
-        <p>My latest experience was as a Software Development Engineer internship at Amazon.com building <a href="http://www.amazon.com/warranty/WarrantyFinder/">Protection Plan Finder</a> from scratch (and it was launched!).  I previously held internships at Intel and Broadcom.</p></div>
-      <div class="grid-item">
-        <h1>Teaching</h1>
-        <hr>
-        <p>I co-found and co-teach Georgia Tech's <a href="https://www.facebook.com/gttechintprep/">Technical Interview Preparation</a> organization.  I'm also the former technical lead of <a href="http://hackgt.com/">HackGT</a> and helped put on two iterations of the hackathon which I believe were major learning opportunities for the Georgia Tech community.</p>
-      </div>
-      <div class="grid-item">
-        <h1>Research</h1>
-        <hr>
-        <p>My research interests are in mobile, wearable and ubiquitous computing.  I have been in the <a href="http://acmelab.gatech.edu/">ACME Lab</a> for the majority of my undergraduate career working on Tactile Teacher.  More recently, I joined the <a href="https://research.cc.gatech.edu/ccg/">Contextual Computing Group</a> working on several cool projects.</p>
-      </div>
-      </div>
-    </div>
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card-panel small responsive-img-card white darken-1">
+						<div class="row valign-wrapper">
+							<div class="responsive-img-col col s6 m4">
+									<img class="responsive-img" src="img/me_casual.png">
+							</div>
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        
-        var $grid = $('.grid').imagesLoaded( function() {
-          // init Masonry after all images have loaded
-          $grid.masonry({
-            $('.grid').masonry({
-              // options
-              itemSelector: '.grid-item',
-              columnWidth: 500
-            });
-          });
-        });
-      });
+							<div class="col s6 m8">
+								<h4>About</h4>
+								<p>Hi! I'm Richard. Check out some of the stuff I've done, and feel free to reach out and say hi! :)</p>
+								<p>
+									<a href="https://www.github.com/lichard49">
+										<i class="fa fa-github fa-2x"></i>
+									</a>
+									<a href="https://www.linkedin.com/in/lichard49">
+										<i class="fa fa-linkedin fa-2x"></i>
+									</a>
+									<a href="mailto:lichard49@gmail.com">
+										<i class="fa fa-envelope fa-2x"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+				<div class="col s12 m6">
+					<div class="card-panel small white darken-1">
+						<div class="row valign-wrapper">
+							<div class="col">
+								<h4>Research</h4>
+								<p>My research interests lie at the intersection of artificial intelligence, human computer interaction, and embedded systems, materializing in the form of wearable and ubiquitous computers. I work in the <a href="http://ubicomp.cc.gatech.edu/">Ubicomp Group</a> and the <a href="https://research.cc.gatech.edu/ccg/">Contextual Computing Group</a> at Georgia Tech on mobile health applications and novel user interfaces.<br><a href="research.html">Read more >>></a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      ga('create', 'UA-71618590-2', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </body>
+
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card-panel small white darken-1">
+						<div class="row valign-wrapper">
+							<div class="col">
+								<h4>Education</h4>
+								<p>I'm currently a second year master's student majoring in computer science with a concentration in <a href="https://www.cc.gatech.edu/academics/degree-programs/masters/computer-science/specializations">interactive artifical intelligence</a> at the Georgia Institute of Technology in Atlanta, Georgia. I graduated from Georgia Tech back in May 2016 with a bachelor's in computer science specializing in <a href="https://www.cc.gatech.edu/intelligence">artifical intelligence</a> and <a href="https://www.cc.gatech.edu/devices">devices</a>. I also completed a music minor in clarinet performance.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col s12 m6">
+					<div class="card-panel small white darken-1">
+						<div class="row valign-wrapper">
+							<div class="col">
+								<h4>Industry</h4>
+								<p><span class="green-text"><b>Currently seeking an internship for the summer of 2018!</b></span><br>In the summer of 2017, I interned at Nvidia Research in the Future Experiences Group working on approaches to fast eye tracking for virtual and augmented reality applications. Prior to that, I had a variety of experiences ranging from production web development to cloud computing interning at Amazon, Intel and Broadcom.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+	</body>
 </html>
