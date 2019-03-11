@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Richard Li | ScratchVR</title>
+
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection">
+		<link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen,projection">
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<style>
+			.card-panel {
+				padding-bottom: 0.6em;
+			}
+			.responsive-img-card {
+				padding-top: 0px;
+				padding-left: 0px;
+				padding-bottom: 0em;
+			}
+
+			.responsive-img-col {
+				margin-bottom: -6px;
+			}
+
+			.fa {
+				margin-right: 0.5em;
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body class="grey lighten-4">
+		<div class="container">
+
+			<div class="row">
+				<div class="col s12 m12">
+					<nav>
+						<div class="nav-wrapper blue lighten-2">
+							<a href="index.html" class="brand-logo left">&nbsp;&nbsp;Richard Li</a>
+							<ul class="right">
+								<li><a href="research.html">Research Projects</a></li>
+								<!-- <li><a href="hacks.html">Hacks</a></li> -->
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 m12">
+					<div class="card-panel small responsive-img-card">
+						<div class="row valign-wrapper">
+							<div class="responsive-img-col col s12 m4">
+									<img class="responsive-img" src="img/tongueboard.png">
+							</div>
+
+							<div class="col s12 m8">
+								<h4>TongueBoard: An Oral Interface for Subtle Input</h4>
+								<p>We present TongueBoard, a retainer form-factor device for recognizing non-vocalized speech. TongueBoard enables absolute position tracking of the tongue by placing capacitive touch sensors on the roof of the mouth. We collect a dataset of 21 common words from four user study participants (two native American English speakers and two non-native speakers with severe hearing loss). We train a classifier that is able to recognize the words with 91.01% accuracy for the native speakers and 77.76% accuracy for the non-native speakers in a user dependent, offline setting. The native English speakers then participate in a user study involving operating a calculator application with 15 non-vocalized words and two tongue gestures at a desktop and with a mobile phone while walking. TongueBoard consistently maintains an information transfer rate of 3.78 bits per decision (number of choices = 17, accuracy = 97.1%) and 2.18 bits per second across stationary and mobile contexts, which is comparable to our control conditions of mouse (desktop) and touchpad (mobile) input</p>
+								<h5>Reference</h5>
+								<p><b>Richard Li</b>, Jason Wu, and Thad Starner. 2019. TongueBoard: An Oral Interface for Subtle Input. In Proceedings of the 10th Augmented Human International Conference 2019 (AH2019). ACM, New York, NY, USA, Article 1, 9 pages. DOI: <a href="https://doi.org/10.1145/3311823.3311831">https://doi.org/10.1145/3311823.3311831</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var $grid = $('.grid').imagesLoaded( function() {
+					// init Masonry after all images have loaded
+					$grid.masonry({
+						$('.grid').masonry({
+							// options
+							itemSelector: '.grid-item',
+							columnWidth: 500
+						});
+					});
+				});
+			});
+		</script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71618590-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-71618590-2');
+		</script>
+	</body>
+</html>
