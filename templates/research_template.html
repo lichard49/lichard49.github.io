@@ -1,0 +1,120 @@
+<div class="row">
+  <div class="col s12">
+    <h4 class="mt-0">Research Publications</h4>
+
+    <p>My research broadly spans several areas, including designing screening assessments of cognitive function, modeling and understanding physical human activities, and enabling novel interaction techniques. I primarily publish in human-computer interaction (e.g., ACM CHI) and ubiquitous computing (e.g., PACM IMWUT) venues.</p>
+
+    <form action="#">
+      <label class="mr-5 chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" data-tag="all" />
+        <span>All Papers</span>
+      </label>
+
+      <label class="mr-5 chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" checked data-tag="selected" />
+        <span>Selected Papers</span>
+      </label>
+
+      <label class="mr-5 chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" data-tag="cognitive" />
+        <span>Cognitive Screening</span>
+      </label>
+
+      <label class="mr-5 chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" data-tag="activity" />
+        <span>Activity Recognition</span>
+      </label>
+
+      <label class="chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" data-tag="interaction" />
+        <span>Interaction Techniques</span>
+      </label>
+    </form>
+  </div>
+</div>
+
+{% for index, paper in papers.iterrows() %}
+  <div class="card mb-5 paper horizontal" tags="{{ paper['Tags'] }}">
+    <div class="card-image">
+      {% if paper['Thumbnail'] != '' %}
+        <img class="card-image-img" src="./img/{{ paper['Thumbnail'] }}">
+      {% else %}
+        <img class="card-image-img" src="./img/blank_image.png">
+      {% endif %}
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">{{ paper['Title'] }}</span>
+        <p class="mb-2">
+          {% if paper['Award'] == 'Best' %}
+            <i class="material-icons" style="color: gold;">emoji_events</i>
+          {% endif %}
+          {% if paper['Award'] == 'Honorable' %}
+            <i class="material-icons" style="color: gold;">leaderboard</i>
+          {% endif %}
+          <i>{{ paper['Venue'] }} {{ paper['Year'] }}</i>
+        </p>
+        <p>{{ paper['Authors'].replace('Richard Li', '<b>Richard Li</b>') }}</p>
+      </div>
+      <div class="card-action">
+        {% if paper['Project Page'] != '' %}
+          <a class="paper-button py-3" href="#"><i class="material-icons mr-1">home</i>Project</a>
+        {% endif %}
+        {% if paper['PDF'] != '' %}
+          <a class="paper-button py-3" href="./pdf/{{ paper['PDF'] }}"><i class="material-icons mr-1">description</i>PDF</a>
+        {% endif %}
+        {% if paper['Video'] != '' %}
+          <a class="paper-button py-3" href="{{ paper['Video']}}"><i class="material-icons mr-1">movie</i>Video</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+<script>
+  const elems = document.querySelectorAll('.sidenav');
+  const instances = M.Sidenav.init(elems, null);
+
+  const papers = document.getElementsByClassName('paper');
+  const filters = document.getElementsByClassName('filter-option');
+
+  function updatePaperFilter() {
+    const targetFilter = location.hash.replace('#', '');
+
+    for (let filterButton of filters) {
+      const filterName = filterButton.getAttribute('data-tag');
+
+      if (filterName == targetFilter) {
+        filterButton.checked = true;
+
+        for (let paper of papers) {
+          const paperTags = paper.getAttribute('tags') ? paper.getAttribute('tags') : [];
+          if (paperTags.toLowerCase().includes(targetFilter) || targetFilter === 'all') {
+            paper.style.display = 'flex';
+          } else {
+            paper.style.display = 'none';
+          }
+        }
+      } else {
+        filterButton.checked = false;
+      }
+    }
+  }
+
+  for (let filter of filters) {
+    filter.onchange = (event) => {
+      location.hash = event.target.getAttribute('data-tag');
+    }
+  }
+
+  if (location.hash === '') {
+    location.hash = 'selected';
+  } else {
+    updatePaperFilter();
+  }
+
+  window.addEventListener('hashchange', (event) => {
+    updatePaperFilter();
+  });
+</script>

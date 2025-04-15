@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.2.1/dist/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.2.1/dist/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      function setTheme(enableDark) {
+        document.documentElement.setAttribute('theme', enableDark ? 'dark' : 'light');
+        localStorage.setItem('theme', enableDark ? 'dark' : 'light');
+      }
+
+      setTheme(false);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav navbar px-5 my-5 indigo darken-3">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">Richard Li</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" class="">Home</a></li>
+            <li><a href="research.html" class="active">Research</a></li>
+            <li><a href="teaching.html" class="">Teaching</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
+
+      <div class="px-5">
+        <div class="row">
+  <div class="col s12">
+    <h4 class="mt-0">Research Publications</h4>
+
+    <p>My research broadly spans several areas, including designing screening assessments of cognitive function, modeling and understanding physical human activities, and enabling novel interaction techniques. I primarily publish in human-computer interaction (e.g., ACM CHI) and ubiquitous computing (e.g., PACM IMWUT) venues.</p>
+
+    <form action="#">
+      <label class="mr-5 chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" data-tag="all" />
+        <span>All Papers</span>
+      </label>
+
+      <label class="mr-5 chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" checked data-tag="selected" />
+        <span>Selected Papers</span>
+      </label>
+
+      <label class="mr-5 chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" data-tag="cognitive" />
+        <span>Cognitive Screening</span>
+      </label>
+
+      <label class="mr-5 chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" data-tag="activity" />
+        <span>Activity Recognition</span>
+      </label>
+
+      <label class="chip mb-5">
+        <input name="filter" type="radio" class="filter-option with-gap" data-tag="interaction" />
+        <span>Interaction Techniques</span>
+      </label>
+    </form>
+  </div>
+</div>
+
+
+  <div class="card mb-5 paper horizontal" tags="Selected, Cognitive">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/beacon_new.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Deploying and Examining Beacon for At-Home Patient Self-Monitoring with Critical Flicker Frequency</span>
+        <p class="mb-2">
+          
+            <i class="material-icons" style="color: gold;">emoji_events</i>
+          
+          
+          <i>ACM CHI Conference on Human Factors in Computing Systems 2025</i>
+        </p>
+        <p><b>Richard Li</b>, Philip Vutien, Sabrina Omer, Michael Yacoub, George Ioannou, Ravi Karkar, Sean A Munson, James Fogarty</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2025-chi-beacon.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Cognitive, Activity">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/blank_image.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Improving Medical Outcomes through At-Home, Longitudinal Health Monitoring</span>
+        <p class="mb-2">
+          
+          
+          <i>UbiComp/ISWC Doctoral Colloquium 2024</i>
+        </p>
+        <p><b>Richard Li</b></p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2024-ubicomp_dc-medical_outcomes.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/embedded_llm.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Exploring and Characterizing Large Language Models for Embedded System Development and Debugging</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM CHI Late-Breaking Work 2024</i>
+        </p>
+        <p>Zachary Englhardt, <b>Richard Li</b>, Dilini Nissanka, Zhihan Zhang, Girish Narayanswamy, Joseph Breda, Xin Liu, Shwetak Patel, Vikram Iyer</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2024-chi_lbw-embedded_llm.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/opportunistic_nudges.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Opportunistic Nudges for Task Migration Between Personal Devices</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM CHI Late-Breaking Work 2024</i>
+        </p>
+        <p>Nikhita Joshi, <b>Richard Li</b>, Jiannan Li, Leonardo Pavanatto, Michel Pahud, Jatin Sharma, Bongshin Lee, Hugo Romat, William Buxton, Nicolai Marquardt</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2024-chi_lbw-opportunistic_nudges.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Activity">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/blank_image.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">The "Get Moving Trial": A Phase I/II RCT of Home-Based (P)rehabilitation ((P)REHAB) with ExerciseRx in Muscle-Invasive Bladder Cancer (MIBC)</span>
+        <p class="mb-2">
+          
+          
+          <i>ASCO Journal of Clinical Oncology 2024</i>
+        </p>
+        <p>Hanna Hunter, Cindy Lin, <b>Richard Li</b>, Otari Ioseliani, Leah Cantor, Elena Brewer, Samia Jannat, Karla Landis, David Bridges, Sean Munson</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2024-jco-get_moving_trial.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/smart_pikachu.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Smart-Pikachu: Extending Interactivity of Stuffed Animals with Large Language Models</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM UIST Student Innovation Challenge 2023</i>
+        </p>
+        <p>Toma Itagaki, <b>Richard Li</b></p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2023-uist_sic-smart_pikachu.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Cognitive">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/beacon.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Evaluating a Novel, Portable, Self-Administrable Device ("Beacon") that Measures Critical Flicker Frequency as a Test for Hepatic Encephalopathy</span>
+        <p class="mb-2">
+          
+          
+          <i>ACG American Journal of Gastroenterology 2023</i>
+        </p>
+        <p>Philip Vutien*, <b>Richard Li</b>*, Ravi Karkar, Sean A Munson, James Fogarty, Kara Walter, Michael Yacoub, George N Ioannou</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2023-ajg-beacon.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Selected, Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/adhocprox.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">AdHocProx: Sensing Mobile, Ad-Hoc Collaborative Device Formations using Dual Ultra-Wideband Radios</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM CHI Conference on Human Factors in Computing Systems 2023</i>
+        </p>
+        <p><b>Richard Li</b>, Teddy Seyed, Nicolai Marquardt, Eyal Ofek, Steve Hodges, Mike Sinclair, Hugo Romat, Michel Pahud, Jatin Sharma, William AS Buxton</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2023-chi-adhocprox.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+          <a class="paper-button py-3" href="https://www.youtube.com/watch?v=xetylStoxA0"><i class="material-icons mr-1">movie</i>Video</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Activity">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/blank_image.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Food, Mood, Context: Examining College Students' Eating Context and Mental Well-Being</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM Transactions on Computing for Healthcare 2022</i>
+        </p>
+        <p>Mehrab Bin Morshed, Samruddhi Shreeram Kulkarni, Koustuv Saha, <b>Richard Li</b>, Leah G Roper, Lama Nachman, Hong Lu, Lucia Mirabella, Sanjeev Srivastava, Kaya De Barbaro, Munmun De Choudhury, Thomas Plötz, Gregory Abowd</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2022-acm_health-food_mood_context.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Activity">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/blank_image.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Accuracy of Home Exercise Detection Using Novel Sonar Mobile Application Technology</span>
+        <p class="mb-2">
+          
+          
+          <i>ACSM Medicine & Science in Sports & Exercise 2022</i>
+        </p>
+        <p>Ahmed I El-Sayed, <b>Richard Li</b>, Parker Ruth, Libby Lavitt, Matthew Essman, Shwetak N Patel, Cindy Y Lin</p>
+      </div>
+      <div class="card-action">
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/silentspeller.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">SilentSpeller: Towards Mobile, Hands-Free, Silent Speech Text Entry using Electropalatography</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM CHI Conference on Human Factors in Computing Systems 2022</i>
+        </p>
+        <p>Naoki Kimura, Tan Gemicioglu, Jonathan Womack, <b>Richard Li</b>, Yuhui Zhao, Abdelkareem Bedri, Zixiong Su, Alex Olwal, Jun Rekimoto, Thad Starner</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2022-chi-silentspeller.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+          <a class="paper-button py-3" href="https://www.youtube.com/watch?v=SngjjQuWCo8"><i class="material-icons mr-1">movie</i>Video</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/mouth_microgestures.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Understanding the Design Space of Mouth Microgestures</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM Designing Interactive Systems Conference 2021</i>
+        </p>
+        <p>Victor Chen, Xuhai Xu, <b>Richard Li</b>, Yuanchun Shi, Shwetak Patel, Yuntao Wang</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2021-dis-design_mouth_microgestures.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/augmented_silkscreen.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Augmented Silkscreen: Designing AR Interactions for Debugging Printed Circuit Boards</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM Designing Interactive Systems Conference 2021</i>
+        </p>
+        <p>Ishan Chatterjee, Olga Khvan, Tadeusz Pforte, <b>Richard Li</b>, Shwetak Patel</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2021-dis-augmented_silkscreen.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/silentspeller.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Mobile, Hands-Free, Silent Speech Texting using SilentSpeller</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM CHI Late-Breaking Work 2021</i>
+        </p>
+        <p>Naoki Kimura, Tan Gemicioglu, Jonathan Womack, <b>Richard Li</b>, Yuhui Zhao, Abdelkareem Bedri, Alex Olwal, Jun Rekimoto, Thad Starner</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2021-chi_lbw-silentspeller.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+          <a class="paper-button py-3" href="https://www.youtube.com/watch?v=SngjjQuWCo8"><i class="material-icons mr-1">movie</i>Video</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Activity">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/blank_image.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">A Real-Time Eating Detection System for Capturing Eating Moments and Triggering Ecological Momentary Assessments to Obtain Further Context: System Development and Validation Study</span>
+        <p class="mb-2">
+          
+          
+          <i>JMIR mHealth and uHealth 2020</i>
+        </p>
+        <p>Mehrab Bin Morshed, Samruddhi Shreeram Kulkarni, <b>Richard Li</b>, Koustuv Saha, Leah Galante Roper, Lama Nachman, Hong Lu, Lucia Mirabella, Sanjeev Srivastava, Munmun De Choudhury, Kaya de Barbaro, Thomas Ploetz, Gregory D Abowd</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2020-jmir_mhealth-real_time_eating.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Selected, Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/nextgaze.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Optical Gaze Tracking with Spatially-Sparse Single-Pixel Detectors</span>
+        <p class="mb-2">
+          
+          
+          <i>IEEE International Symposium on Mixed and Augmented Reality 2020</i>
+        </p>
+        <p><b>Richard Li</b>, Eric Whitmire, Michael Stengel, Ben Boudaoud, Jan Kautz, David Luebke, Shwetak Patel, Kaan Akşit</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2020-ismar-nextgaze.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+          <a class="paper-button py-3" href="https://www.youtube.com/watch?v=7_hMGwTGdhg"><i class="material-icons mr-1">movie</i>Video</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/kissglass.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">KissGlass: Greeting Gesture Recognition using Smart Glasses</span>
+        <p class="mb-2">
+          
+          
+          <i>Augmented Humans International Conference 2020</i>
+        </p>
+        <p><b>Richard Li</b>, Juyoung Lee, Woontack Woo, Thad Starner</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2020-ahs-kissglass.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Cognitive">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/beacon.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Evaluating a Novel, Portable, Self-Administered Device ("Flicker-App") that Measures Critical Flicker Frequency as a Test for Hepatic Encephalopathy in Patients with Cirrhosis</span>
+        <p class="mb-2">
+          
+          
+          <i>AASLD The Liver Meeting Digital Experience 2020</i>
+        </p>
+        <p>Philip Vutien, Ravi Karkar, <b>Richard Li</b>, Kara Walter, Sean Munson, James Fogarty, George Ioannou</p>
+      </div>
+      <div class="card-action">
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Activity">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/blank_image.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Prediction of Mood Instability with Passive Sensing</span>
+        <p class="mb-2">
+          
+          
+          <i>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 2019</i>
+        </p>
+        <p>Mehrab Bin Morshed, Koustuv Saha, <b>Richard Li</b>, Sidney K D'Mello, Munmun De Choudhury, Gregory D Abowd, Thomas Plötz</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2019-imwut-mood_instability.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/scratchthat.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">ScratchThat: Supporting Command-Agnostic Speech Repair in Voice-Driven Assistants</span>
+        <p class="mb-2">
+          
+          
+          <i>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 2019</i>
+        </p>
+        <p>Jason Wu, Karan Ahuja, <b>Richard Li</b>, Victor Chen, Jeffrey Bigham</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2019-imwut-scratchthat.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Selected, Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/tongueboard.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">TongueBoard: An Oral Interface for Subtle Input</span>
+        <p class="mb-2">
+          
+          
+          <i>Augmented Humans International Conference 2019</i>
+        </p>
+        <p><b>Richard Li</b>, Jason Wu, Thad Starner</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2019-ahs-tongueboard.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/scratch.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">ScratchVR: Low-Cost, Calibration-Free Sensing for Tactile Input on Mobile Virtual Reality Enclosures</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM International Symposium on Wearable Computers 2018</i>
+        </p>
+        <p><b>Richard Li</b>, Victor Chen, Gabriel Reyes, Thad Starner</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2018-iswc-scratchvr.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/buccal.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Buccal: Low-Cost Cheek Sensing for Inferring Continuous Jaw Motion in Mobile Virtual Reality</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM International Symposium on Wearable Computers 2018</i>
+        </p>
+        <p><b>Richard Li</b>, Gabriel Reyes</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2018-iswc-buccal.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Activity">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/blank_image.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">WristWash: Towards Automatic Handwashing Assessment Using a Wrist-Worn Device</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM International Symposium on Wearable Computers 2018</i>
+        </p>
+        <p>Hong Li, Shishir Chawla, <b>Richard Li</b>, Sumeet Jain, Gregory D Abowd, Thad Starner, Cheng Zhang, Thomas Plötz</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2018-iswc-wristwash.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Selected, Activity">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/earbit.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">EarBit: Using Wearable Sensors to Detect Eating Episodes in Unconstrained Environments</span>
+        <p class="mb-2">
+          
+          
+          <i>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 2017</i>
+        </p>
+        <p>Abdelkareem Bedri, <b>Richard Li</b>, Malcolm Haynes, Raj Prateek Kosaraju, Ishaan Grover, Temiloluwa Prioleau, Min Yan Beh, Mayank Goel, Thad Starner, Gregory Abowd</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2017-imwut-earbit.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+          <a class="paper-button py-3" href="https://www.youtube.com/watch?v=JEK5lrhQKwc"><i class="material-icons mr-1">movie</i>Video</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/tactile_teacher.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Tactile Teacher: Enhancing Traditional Piano Lessons with Tactile Instructions</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM Conference on Computer Supported Cooperative Work and Social Computing Poster 2016</i>
+        </p>
+        <p><b>Richard Li</b>, Yingyan Wang, Chih-Pin Hsiao, Nicholas Davis, James Hallam, Ellen Yi-Luen Do</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2016-cscw_poster-tactile_teacher.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-5 paper horizontal" tags="Interaction">
+    <div class="card-image">
+      
+        <img class="card-image-img" src="./img/tactile_teacher.png">
+      
+      
+    </div>
+    <div class="card-stacked">
+      <div class="card-content py-4">
+        <span class="card-title">Tactile Teacher: Sensing Finger Tapping in Piano Playing</span>
+        <p class="mb-2">
+          
+          
+          <i>ACM Tangible, Embedded, and Embodied Interaction Demo 2015</i>
+        </p>
+        <p>Chih-Pin Hsiao, <b>Richard Li</b>, Xinyan Yan, Ellen Yi-Luen Do</p>
+      </div>
+      <div class="card-action">
+        
+        
+          <a class="paper-button py-3" href="./pdf/2015-tei_demo-tactile_teacher.pdf"><i class="material-icons mr-1">description</i>PDF</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  const elems = document.querySelectorAll('.sidenav');
+  const instances = M.Sidenav.init(elems, null);
+
+  const papers = document.getElementsByClassName('paper');
+  const filters = document.getElementsByClassName('filter-option');
+
+  function updatePaperFilter() {
+    const targetFilter = location.hash.replace('#', '');
+
+    for (let filterButton of filters) {
+      const filterName = filterButton.getAttribute('data-tag');
+
+      if (filterName == targetFilter) {
+        filterButton.checked = true;
+
+        for (let paper of papers) {
+          const paperTags = paper.getAttribute('tags') ? paper.getAttribute('tags') : [];
+          if (paperTags.toLowerCase().includes(targetFilter) || targetFilter === 'all') {
+            paper.style.display = 'flex';
+          } else {
+            paper.style.display = 'none';
+          }
+        }
+      } else {
+        filterButton.checked = false;
+      }
+    }
+  }
+
+  for (let filter of filters) {
+    filter.onchange = (event) => {
+      location.hash = event.target.getAttribute('data-tag');
+    }
+  }
+
+  if (location.hash === '') {
+    location.hash = 'selected';
+  } else {
+    updatePaperFilter();
+  }
+
+  window.addEventListener('hashchange', (event) => {
+    updatePaperFilter();
+  });
+</script>
+      </div>
+    </div>
+  </body>
+</html>

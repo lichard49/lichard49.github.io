@@ -1,428 +1,133 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Richard Li | Home</title>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.2.1/dist/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.2.1/dist/js/materialize.min.js"></script>
 
-		<!--Import Google Icon Font-->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"	media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<!-- Import Font Awesome for icons -->
-		<link type="text/css" rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" media="screen,projection">
+    <link rel="stylesheet" href="css/style.css">
 
-		<!--Let browser know website is optimized for mobile-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>
+      function setTheme(enableDark) {
+        document.documentElement.setAttribute('theme', enableDark ? 'dark' : 'light');
+        localStorage.setItem('theme', enableDark ? 'dark' : 'light');
+      }
 
-		<style>
-		.where-item {
-			padding-bottom: 1rem;
-		}
+      setTheme(false);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav navbar px-5 my-5 indigo darken-3">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">Richard Li</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="research.html" class="">Research</a></li>
+            <li><a href="teaching.html" class="">Teaching</a></li>
+          </ul>
+        </div>
+      </nav>
 
-		.inline-header {
-			padding-top: 20px;
-			padding-left: 24px;
-		}
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
 
-		.paper-title {
-			padding-top: 20px;
-		}
-		</style>
-	</head>
+      <div class="px-5">
+        <div class="card-panel">
+  <div class="row">
+    <div class="col m6 s12">
+      <h4 class="mt-0">About Me</h4>
 
-	<body class="grey lighten-4">
+      <p>I am a PhD candidate in <a href="https://www.cs.washington.edu/">Computer Science & Engineering</a> at the University of Washington. I am co-advised by <a href="https://homes.cs.washington.edu/~jfogarty/">James Fogarty</a> and <a  href="https://homes.cs.washington.edu/~shwetak/">Shwetak Patel</a>, and I am affiliated with the <a href="https://dub.uw.edu/">DUB Group</a> and <a href="https://ubicomplab.cs.washington.edu/">Ubicomp Lab</a>.</p>
+      <p>I am a human-computer interaction and ubiquitous computing researcher. I am broadly interested in interactive systems that use sensors and machine learning to solve real-world problems.</p>
+      <p>I previously received my Bachelors and Masters in Computer Science from the Georgia Institute of Technology. I have also spent time at Microsoft Research, Google Research and Google X, and Nvidia Research.</p>
+      <p>
+        <a class="paper-button py-3" href="mailto:lichard49@gmail.com">
+          <i class="material-icons mr-1">mail</i>
+          <span class="mr-5">E-Mail</span>
+        </a>
+        <a class="paper-button py-3" href="https://github.com/lichard49/">
+          <i class="material-icons mr-1">code</i>
+          <span>GitHub</span></p>
+        </a>
+      </p>
+    </div>
 
-		<div class="container">
+    <div class="col m6 s12">
+      <img id="headshot" src="img/headshot.jpg" />
+    </div>
+  </div>
+</div>
 
-			<!-- Top nav bar -->
-			<div class="row">
-				<div class="col s12 m12 l12">
-					<nav>
-						<div class="nav-wrapper blue lighten-2">
-							<a href="#" class="brand-logo">&nbsp;Richard Li</a>
-						</div>
-					</nav>
-				</div>
-			</div>
+<div class="row">
+  <div class="col s12">
+    <h4>Research Areas</h4>
 
-			<div class="row">
-				<!-- About me card -->
-				<div class="col s12 m3 l3">
-					<div class="card">
-				<div class="card-image">
-				  <img src="img/me_research.jpg" alt="Headshot of Richard wearing a Google Glass">
-				  <span class="card-title">Hi!  I'm Richard.</span>
-				</div>
-				<div class="card-content">
-				  <p>Currently a PhD student in <a href="https://www.cs.washington.edu/">Computer Science & Engineering</a> at the University of Washington (UW). Previously an intern on the <a href="https://www.microsoft.com/en-us/research/group/epic/">EPIC</a> and <a href="https://www.microsoft.com/en-us/research/group/ability/">Ability</a> teams at Microsoft Research, and was a research scholar at <a href="https://x.company/">Google [x]</a> and <a href="https://research.google/">Google Research</a>.  Check out some of the cool and things I've worked on, and feel free to say hi :).</p>
-				</div>
-				<div class="card-action">
-					<a href="https://www.github.com/lichard49">
-						<i class="fa fa-github fa-2x"></i>
-					</a>
-					<a href="mailto:lichard49@gmail.com">
-						<i class="fa fa-envelope fa-2x"></i>
-					</a>
-				</div>
-			  </div>
+    <p>My research broadly spans several areas, including designing screening assessments of cognitive function, modeling and understanding physical human activities, and enabling novel interaction techniques. I primarily publish in human-computer interaction (e.g., ACM CHI) and ubiquitous computing (e.g., PACM IMWUT) venues. See <a href="research.html#selected">selected representative publications</a> or view a <a href="research.html#all">full list of publications</a>.</p>
+  </div>
+</div>
 
-					<div class="card horizontal">
-						<!-- <div class="card-stacked">
-							<div class="card-content">
-								<h4>What's up?</h4>
+<div class="row mb-5">
+  <div class="col m4 s6">
+    <div class="card">
+      <div class="card-image">
+        <img src="img/beacon_new.png">
+      </div>
 
-								<p class="where-item"><span class="orange-text text-darken-2">2020.10.12</span>... A year in Seattle has flown by! Year 2 at UW :)<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2020.10.02</span>... Finishing out an awesome (virtual) summer at Microsoft Research on the Ability team<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2020.09.15</span>... Had a surprisingly good time virtually attending Ubicomp/ISWC despite not being in Cancun<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.09.18</span>... Start of my UW career!!<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.09.08</span>... In London for Ubicomp/ISWC as a student volunteer<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.08.16</span>... Quick trip to Seattle<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.08.13</span>... Hiked up Half Dome at Yosemite to (almost) close out the summer, one more week<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.05.13</span>... One week until I start my internship at Google [X]!<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.05.03</span>... End of my last semester at Georgia Tech... ISWC paper submitted<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.04.15</span>... I've decided to move to the University of Washington for the rest of my PhD!<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.03.11</span>... First time in Paris (and Europe)! Presenting Tongueboard<p>							
-								<p class="where-item"><span class="orange-text text-darken-2">2019.02.04</span>... Paper accepted at Augmented Human<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.01.03</span>... Awarded a Siemens Futuremaker Fellowship (declined)<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2019.01.01</span>... New website is up, hope to keep this microblog going<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2018.10.08</span>... Presenting ScratchVR and Buccal at Ubicomp/ISWC in Singapore!<p>
-								<p class="where-item"><span class="orange-text text-darken-2">2018.09.10</span>... Back to Atlanta for round 3 (PhD) at Georgia Tech</p>
-								<p class="where-item"><span class="orange-text text-darken-2">2018.06.03</span>... Excited to be interning at Google Research in Mountain View working on wearables</p>
-								<p class="where-item"><span class="orange-text text-darken-2">2018.05.04</span>... Graduating masters of computer science from Georgia Tech</p>
-							</div>
-						</div> -->
-					</div>
-				</div>
+      <div class="card-content p-4">
+        <p>Designing Screening Assessments of Cognitive Function for At-Home Use</p>
+      </div>
 
-				<!-- Research card -->
-				<div class="col s12 m9 l9">
-					
-					<div class="card horizontal">
-						<!-- <div class="card-image">
-							<img src="img/me_casual.png">
-						</div> -->
-						
-						<div class="card-stacked">
-							<div class="card-content">
-								<h4>Research Overview</h4>
-								<p>My research interests lie at the intersection of artificial intelligence, embedded systems, and human-computer interaction, materializing in the form of wearable and ubiquitous computers. I work with <a href="https://homes.cs.washington.edu/~jfogarty/">James Fogarty</a> and <a href="https://homes.cs.washington.edu/~shwetak/">Shwetak Patel</a> (in the <a href="https://ubicomplab.cs.washington.edu/">Ubicomp Lab</a>) among many other amazing collaborators across multiple departments at the University of Washington on a variety of topics ranging from mobile health applications to novel user interfaces.  I publish this work at academic venues such as the Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT) journal and at the Conference on Human Factors in Computing Systems (CHI); see <a href="#publications_full">below</a> for a complete list of publications.</p>
-							</div>
-						</div>
-					</div>
+      <div class="card-action">
+        <a href="research.html#cognitive">See publications >>></a>
+      </div>
+    </div>
+  </div>
 
-					<h4 class="inline-header">Selected Projects & Publications</h4>
+  <div class="col m4 s6">
+    <div class="card">
+      <div class="card-image">
+        <img src="img/earbit.png">
+      </div>
 
-					<!-- AdHocProx -->
-					<div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">
-								<img class="responsive-img" src="img/adhocprox.png" alt="Image of a tablet with electronics attached to it">
-							</div>
+      <div class="card-content p-4">
+        <p>Modeling and Understanding Physical Human Activities in the Real World</p>
+      </div>
 
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="res/2023chi-adhocprox.pdf">AdHocProx: Sensing Mobile, Ad-Hoc Collaborative Device Formations using Dual Ultra-Wideband Radios</a></h6>
-									<p><b>Richard Li</b>, Teddy Seyed, Nicolai Marquardt, Eyal Ofek, Steve Hodges, Mike Sinclair, Hugo Romat, Michel Pahud, Jatin Sharma, William Buxton, Ken Hinckley, Nathalie Henry Riche</p>
-								</div>
-							</div>
-						</div>
-					</div>
+      <div class="card-action">
+        <a href="research.html#activity">See publications >>></a>
+      </div>
+    </div>
+  </div>
 
-					<!-- Beacon -->
-					<div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">
-								<img class="responsive-img" src="img/beacon.png" alt="Image of a lamp-like device">
-							</div>
+  <div class="col m4 s6">
+    <div class="card">
+      <div class="card-image">
+        <img src="img/adhocprox.png">
+      </div>
 
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="res/2023ajg-beacon.pdf">Evaluating a Novel, Portable, Self-Administrable Device ("Beacon") that Measures Critical Flicker Frequency as a Test for Hepatic Encephalopathy</a></h6>
-									<p><b>Richard Li*</b>, Philip Vutien*, Ravi Karkar, Sean A. Munson, James Fogarty, Kara Walter, Michael Yacoub, George N. Ioannou</p>
-								</div>
-							</div>
-						</div>
-					</div>
+      <div class="card-content p-4">
+        <p>Enabling Novel Interaction Techniques for Next&#8209;Generation Computing</p>
+      </div>
 
-					<!-- NextGaze -->
-					<div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">
-								<img class="responsive-img" src="img/nextgaze-small.png" alt="Image of a gaze-tracking device">
-							</div>
-
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="nextgaze.html">Optical Gaze Tracking with Spatially-Sparse Single-Pixel Detectors</a></h6>
-									<p><b>Richard Li*</b>, Eric Whitmire*, Michael Stengel, Ben Boudaoud, Jan Kautz, David Luebke, Shwetak Patel, and Kaan Ak&scedil;it</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- TongueBoard -->
-					<div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">
-								<img class="responsive-img" src="img/tongueboard.png" alt="Collage of a retainer with electronics, Richard wearing the retainer, and visual representations of data from the retainer">
-							</div>
-
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="tongueboard.html">TongueBoard: An Oral Interface for Subtle Input</a></h6>
-									<p><b>Richard Li</b>, Jason Wu, Thad Starner</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- ScratchVR -->
-					<div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">	
-								<img class="responsive-img" src="img/scratch.png" alt="Person holding up Google Cardboard interacting with an attached interface on the side">
-							</div>
-
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="scratch.html">ScratchVR: Low-Cost, Calibration-Free Sensing for Tactile Input on Mobile Virtual Reality Enclosures</a></h6>
-									<p><b>Richard Li</b>, Victor Chen, Gabriel Reyes, Thad Starner</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<!-- Buccal -->
-					<div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">	
-								<img class="responsive-img" src="img/buccal.png" alt="Virtual reality headset with arrows indicating electronics added to the strap, nose, and cheek areas">
-							</div>
-
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="buccal.html">Buccal: Low-Cost Cheek Sensing for Inferring Continuous Jaw Motion in Mobile Virtual Reality</a></h6>
-									<p><b>Richard Li</b>, Gabriel Reyes</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- WristWash -->
-					<!-- <div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">	
-								<img class="responsive-img" src="img/wristwash.png" alt="Hands in a washing position while wearing a smartwatch">
-							</div>
-
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="res/p132-li-iswc2018.pdf">Wristwash: Towards Automatic Handwashing Assessment using a Wrist-Worn Device</a></h6>
-									<p>Hong Li, Shishir Chawla, <b>Richard Li</b>, Sumeet Jain, Gregory D. Abowd, Thad Starner, Cheng Zhang, Thomas Ploetz</p>
-								</div>
-							</div>
-						</div>
-					</div> -->
-
-					<!-- EarBit -->
-					<div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">	
-								<img class="responsive-img" src="img/earbit.png" alt="Headshot of Richard wearing a device around the ear wired to a device around the neck">
-							</div>
-
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="earbit.html">EarBit: Using Wearable Sensors to Detect Eating Episodes in Unconstrained Environments</a></h6>
-									<p>Abdelkareem Bedri, <b>Richard Li</b>, Malcolm Haynes, Raj Prateek Kosaraju, Ishaan Grover, Temiloluwa Prioleau, Min Yan Beh, Mayank Goel, Thad Starner, and Gregory Abowd</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Tactile Teacher -->
-					<div class="card horizontal">
-						<div class="row valign-wrapper" style="margin-bottom: 0;">
-							<div class="card-image col s12 m3">	
-								<img class="responsive-img" src="img/tactile_teacher.png" alt="Hand touching piano keys while wearing a glove with electronics on it">
-							</div>
-
-							<div class="card-stacked col s12 m9">
-								<div class="card-content">
-									<h6><a href="tactile-teacher.html">Tactile Teacher: Enhancing Traditional Piano Lessons with Tactile Instructions</a></h6>
-									<p><b>Richard Li</b>, Yingyan Wang, Chih-Pin Hsiao, Nicholas Davis, James Hallam, and Ellen Do</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- full list of publications -->
-					<div class="card horizontal">
-						<div id="publications_full" class="card-content">
-							<h4>Full List of Publications</h4>
-							<h6 class="paper-title">Augmented Silkscreen: Designing AR Interactions for Debugging Printed Circuit Boards</h6>
-							<p>
-								<span>Ishan Chatterjee, Olga Khvan, Tadeusz Pforte, 
-									<b>Richard Li</b>, Shwetak Patel
-								</span>
-							</p>
-							<p>
-								<i>Designing Interactive Systems Conference 2021</i>
-							</p>
-							<h6 class="paper-title">Understanding the Design Space of Mouth Microgestures</h6>
-							<p>
-								<span>Victor Chen, Xuhai Xu, 
-									<b>Richard Li</b>, Yuanchun Shi, Shwetak Patel, Yuntao Wang
-								</span>
-							</p>
-							<p>
-								<i>Designing Interactive Systems Conference 2021</i>
-							</p>
-							<h6 class="paper-title">Mobile, Hands-free, Silent Speech Texting Using SilentSpeller</h6>
-							<p>
-								<span>Naoki Kimura, Tan Gemicioglu, Jonathan Womack, 
-									<b>Richard Li</b>, Yuhui Zhao, Abdelkareem Bedri, Alex Olwal, Jun Rekimoto, Thad Starner
-								</span>
-							</p>
-							<p>
-								<i>Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems</i>
-							</p>
-							<h6 class="paper-title">Evaluating a novel, portable, self-administered device ("flicker-app") that measures critical flicker frequency as a test for hepatic encephalopathy in patients with cirrhosis</h6>
-							<p>
-								<span>Philip Vutien, Ravi Karkar, 
-									<b>Richard Li</b>, Kara Walter, Sean Munson, James Fogarty, George Ioannou
-								</span>
-							</p>
-							<p>
-								<i>The Liver Meeting Digital Experience</i>
-							</p>
-							<h6 class="paper-title">Prediction of mood instability with passive sensing</h6>
-							<p>
-								<span>Mehrab Bin Morshed, Koustuv Saha, 
-									<b>Richard Li</b>, Sidney K D'Mello, Munmun De Choudhury, Gregory D Abowd, Thomas Plötz
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</i>
-							</p>
-							<h6 class="paper-title">A Real-Time Eating Detection System for Capturing Eating Moments and Triggering Ecological Momentary Assessments to Obtain Further Context: System Development and Validation Study</h6>
-							<p>
-								<span>Mehrab Bin Morshed, Samruddhi Shreeram Kulkarni, 
-									<b>Richard Li</b>, Koustuv Saha, Leah Galante Roper, Lama Nachman, Hong Lu, Lucia Mirabella, Sanjeev Srivastava, Munmun De Choudhury
-								</span>
-							</p>
-							<p>
-								<i>JMIR mHealth and uHealth</i>
-							</p>
-							<h6 class="paper-title">Optical gaze tracking with spatially-sparse single-pixel detectors</h6>
-							<p>
-								<span>
-									<b>Richard Li</b>, Eric Whitmire, Michael Stengel, Ben Boudaoud, Jan Kautz, David Luebke, Shwetak Patel, Kaan Akşit
-								</span>
-							</p>
-							<p>
-								<i>2020 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)</i>
-							</p>
-							<h6 class="paper-title">Kissglass: Greeting gesture recognition using smart glasses</h6>
-							<p>
-								<span>
-									<b>Richard Li</b>, Juyoung Lee, Woontack Woo, Thad Starner
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the Augmented Humans International Conference</i>
-							</p>
-							<h6 class="paper-title">ScratchThat: Supporting Command-Agnostic Speech Repair in Voice-Driven Assistants</h6>
-							<p>
-								<span>Jason Wu, Karan Ahuja, 
-									<b>Richard Li</b>, Victor Chen, Jeffrey Bigham
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</i>
-							</p>
-							<h6 class="paper-title">TongueBoard: An oral interface for subtle input</h6>
-							<p>
-								<span>
-									<b>Richard Li</b>, Jason Wu, Thad Starner
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the 10th Augmented Human International Conference 2019</i>
-							</p>
-							<h6 class="paper-title">ScratchVR: low-cost, calibration-free sensing for tactile input on mobile virtual reality enclosures</h6>
-							<p>
-								<span>
-									<b>Richard Li</b>, Victor Chen, Gabriel Reyes, Thad Starner
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the 2018 ACM International Symposium on Wearable Computers</i>
-							</p>
-							<h6 class="paper-title">Buccal: Low-cost cheek sensing for inferring continuous jaw motion in mobile virtual reality</h6>
-							<p>
-								<span>
-									<b>Richard Li</b> &amp; Gabriel Reyes
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the 2018 ACM International Symposium on Wearable Computers</i>
-							</p>
-							<h6 class="paper-title">Wristwash: towards automatic handwashing assessment using a wrist-worn device</h6>
-							<p>
-								<span>Hong Li, Shishir Chawla, 
-									<b>Richard Li</b>, Sumeet Jain, Gregory D Abowd, Thad Starner, Cheng Zhang, Thomas Plötz
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the 2018 ACM international symposium on wearable computers</i>
-							</p>
-							<h6 class="paper-title">EarBit: Using Wearable Sensors to Detect Eating Episodes in Unconstrained Environments</h6>
-							<p>
-								<span>Abdelkareem Bedri, 
-									<b>Richard Li</b>, Malcolm Haynes, Raj Prateek Kosaraju, Ishaan Grover, Temiloluwa Prioleau, Min Yan Beh, Mayank Goel, Thad Starner, Gregory Abowd
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</i>
-							</p>
-							<h6 class="paper-title">Tactile Teacher: Enhancing Traditional Piano Lessons with Tactile Instructions</h6>
-							<p>
-								<span>
-									<b>Richard Li</b>, Yingyan Wang, Chih-Pin Hsiao, Nicholas Davis, James Hallam, Ellen Yi-Luen Do
-								</span>
-							</p>
-							<p>
-								<i>19th ACM Conference on Computer Supported Cooperative Work and Social Computing Companion</i>
-							</p>
-							<h6 class="paper-title">Tactile teacher: Sensing finger tapping in piano playing</h6>
-							<p>
-								<span>Chih-Pin Hsiao, 
-									<b>Richard Li</b>, Xinyan Yan, Ellen Yi-Luen Do
-								</span>
-							</p>
-							<p>
-								<i>Proceedings of the Ninth International Conference on Tangible, Embedded, and Embodied Interaction</i>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-		<!--JavaScript at end of body for optimized loading-->
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71618590-2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-71618590-2');
-		</script>
-	</body>
+      <div class="card-action">
+        <a href="research.html#interaction">See publications >>></a>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </body>
 </html>
