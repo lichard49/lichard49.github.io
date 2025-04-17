@@ -34,6 +34,11 @@ img {
 }
 
 #headshot {
-  height: 100%;
   object-fit: cover;
+}
+
+@media screen and (min-width: 600px) {
+  #headshot {
+    height: 100%;
+  }
 }
