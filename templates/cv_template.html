@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richard Li | CV</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.2.1/dist/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    @media print {
+      @page {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        margin-left: 0;
+        margin-right: 2rem;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-top: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-top: 0.5rem;
+      margin-bottom: 0.2rem;
+    }
+
+    p {
+      margin-top: 0.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .date-text {
+      font-size: 0.75rem;
+    }
+
+    .col {
+      align-self: baseline;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.2.1/dist/js/materialize.min.js"></script>
+
+  <script>
+    function setTheme(enableDark) {
+      document.documentElement.setAttribute('theme', enableDark ? 'dark' : 'light');
+      localStorage.setItem('theme', enableDark ? 'dark' : 'light');
+    }
+
+    setTheme(false);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h1>Richard Li</h1></div>
+    </div>
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10">
+        <p>Email: <a href="">Lichard@cs.washington.edu</a></p>
+        <p>Website: <a href="https://Lichard49.github.io">https://Lichard49.github.io</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Employment</h2></div>
+    </div>
+
+    {% for index, employer in employment.iterrows() %}
+    <div class="row">
+      <div class="col s2 right-align date-text">{{ employer['Dates'] }}</div>
+      <div class="col s10">
+
+        <p><b>{{ employer['Institution'] }}</b> - <i>{{ employer['Title'] }}</i></p>
+        <p>{% if employer['Description'] %}{{ employer['Description'] }} {% endif %}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Education</h2></div>
+    </div>
+
+    {% for index, institution in education.iterrows() %}
+    <div class="row">
+      <div class="col s2 right-align date-text">{{ institution['Dates'] }}</div>
+      <div class="col s10">
+        <p><b>{{ institution['Institution'] }}</b></p>
+        <p><i>{{ institution['Degree'] }}</i></p>
+        <p>{{ institution['Description'] }}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Awards</h2></div>
+    </div>
+
+    {% for index, award in awards.iterrows() %}
+    <div class="row">
+      <div class="col s2 right-align date-text">{{ award['Year'] }}</div>
+      <div class="col s10">
+        <p><b>{{ award['Award'] }}</b> - <i>{{ award['Sponsor'] }}</i></p></div>
+    </div>
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Refereed Publications</h2></div>
+    </div>
+
+    {% for index, paper in papers.iterrows() %}
+      {% if paper['Review'] == 'Full' %}
+      <div class="row">
+        <div class="col s2 right-align date-text">{{ paper['Year'] }}</div>
+        <div class="col s10">
+          <p><b>{{ paper['Title'] }}</b></p>
+          <p><i>{{ paper['Venue'] }}</i></p>
+          <p>{{ paper['Authors'].replace('Richard Li', '<u>Richard Li</u>') }}</p>
+
+          {% if paper['Award'] == 'Best' %}
+            <p style="color: gold;">
+              <i class="material-icons">emoji_events</i>
+              <span style="vertical-align: 3px;">Best Paper Award</span>
+            </p>
+          {% endif %}
+          {% if paper['Award'] == 'Honorable' %}
+          <p style="color: gold;">
+              <i class="material-icons">leaderboard</i>
+              <span style="vertical-align: 3px;">Best Paper Honorable Mention</span>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Lightly-Reviewed Publications</h2></div>
+    </div>
+
+    {% for index, paper in papers.iterrows() %}
+      {% if paper['Review'] == 'Light' %}
+      <div class="row">
+        <div class="col s2 right-align date-text">{{ paper['Year'] }}</div>
+        <div class="col s10">
+          <p><b>{{ paper['Title'] }}</b></p>
+          <p><i>{{ paper['Venue'] }}</i></p>
+          <p>{{ paper['Authors'].replace('Richard Li', '<u>Richard Li</u>') }}</p>
+
+          {% if paper['Award'] == 'Best' %}
+            <p style="color: gold;">
+              <i class="material-icons">emoji_events</i>
+              <span style="vertical-align: 3px;">Best Paper Award</span>
+            </p>
+          {% endif %}
+          {% if paper['Award'] == 'Honorable' %}
+          <p style="color: gold;">
+              <i class="material-icons">leaderboard</i>
+              <span style="vertical-align: 3px;">Best Paper Honorable Mention</span>
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Invited Talks</h2></div>
+    </div>
+
+    {% for index, talk in talks.iterrows() %}
+    <div class="row">
+      <div class="col s2 right-align date-text">{{ talk['Date'] }}</div>
+      <div class="col s10">
+        <p><b>{{ talk['Title'] }}</b></p>
+        <p>Host: {{ talk['Venue'] }}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Teaching</h2></div>
+    </div>
+
+    {% for index, clazz in teaching.iterrows() %}
+    <div class="row">
+      <div class="col s2 right-align date-text">{{ clazz['Date'] }}</div>
+      <div class="col s10">
+        <p><b>{{ clazz['Class'] }}</b> - <i>{{ clazz['Role'] }}</i></p>
+        <p>{{ clazz['Description'] }}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Student Mentorship</h2></div>
+    </div>
+
+    {% for index, student in mentorship.iterrows() %}
+    <div class="row">
+      <div class="col s2 right-align date-text">{{ student['Dates'] }}</div>
+      <div class="col s10">
+        <p>
+          <b>{{ student['Name'] }}</b>
+          {% if student['Now'] %}
+           - <i>Now: {{ student['Now'] }}</i>
+          {% endif %}
+        </p>
+        <p>
+          {% if student['Awards'] %}
+            <u>{{ student['Awards'] }}</u>. 
+          {% endif %}
+          {{ student['Projects'] }}
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10"><h2>Service</h2></div>
+    </div>
+
+    <div class="row" style="margin-bottom: 0.5rem;">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10">
+        <h3>Paper Reviewing</h3>
+        <i>Asterisk (*) denotes outstanding review</i>
+      </div>
+    </div>
+
+    {% for index, serve in service.iterrows() %}
+      {% if serve['Type'] == 'Paper Reviewing' %}
+      <div class="row">
+        <div class="col s2 right-align date-text"></div>
+        <div class="col s10">
+          <p>
+            <b>{{ serve ['Venue'] }}</b>
+            - {{ serve ['Years'] }}
+          </p>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10">
+        <h3>Student Volunteering</h3>
+      </div>
+    </div>
+
+    {% for index, serve in service.iterrows() %}
+      {% if serve['Type'] == 'Student Volunteering' %}
+      <div class="row">
+        <div class="col s2 right-align date-text"></div>
+        <div class="col s10">
+          <p>
+            <b>{{ serve ['Venue'] }}</b>
+            - {{ serve ['Years'] }}
+          </p>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    <div class="row">
+      <div class="col s2 right-align date-text"></div>
+      <div class="col s10">
+        <h3>Institution Volunteering</h3>
+      </div>
+    </div>
+
+    {% for index, serve in service.iterrows() %}
+      {% if serve['Type'] == 'Institution Volunteering' %}
+      <div class="row">
+        <div class="col s2 right-align date-text"></div>
+        <div class="col s10">
+          <p>
+            <b>{{ serve ['Venue'] }}</b>
+            - {{ serve ['Years'] }}
+          </p>
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</body>
+</html>
