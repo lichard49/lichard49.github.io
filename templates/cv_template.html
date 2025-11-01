@@ -141,6 +141,12 @@
               <span style="vertical-align: 3px;">Best Paper Award</span>
             </p>
           {% endif %}
+          {% if paper['Award'] == 'Oral' %}
+          <p style="color: gold;">
+              <i class="material-icons">campaign</i>
+              <span style="vertical-align: 3px;">Oral Presentation</span>
+            </p>
+          {% endif %}
           {% if paper['Award'] == 'Honorable' %}
           <p style="color: gold;">
               <i class="material-icons">leaderboard</i>
